@@ -1,26 +1,28 @@
-#installation Step 
-#if you want to install fastapi in your machine follow this link:
-#https://fastapi.tiangolo.com/
-
-# Api basic intro section 
-
 from fastapi import FastAPI
-
-# same as express
 app =FastAPI()
 
-@app.get('/') #path('/') & get method is operatin
-
-#def is the keyword for defining a function
-#index is path operation function
+@app.get('/') 
 def index():return {
-    'info':'FastApi get method',
-     'data':{
-         'name':'Ashish'
-     }
+     'data':'blog list'
 }
-@app.get('/about')
-def about():
-    return {'data':'about page' }
-    
+@app.get('/blog/unpublished')
+
+def unpublished():
+    return {
+        'data':'all unpublished blogs'
+    }
+@app.get('/blog/{id}')
+def show(id:int):
+    # fetch blog with id=id
+    return {'data':id }
+
+
+
+
+@app.get('/blog/{id}/comments')
+def comments(id):
+    return {'data':{
+        "Comment1",
+        "Comment2"
+    }}
 
