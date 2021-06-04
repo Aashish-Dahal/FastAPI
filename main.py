@@ -2,7 +2,7 @@
 #if you want to install fastapi in your machine follow this link:
 #https://fastapi.tiangolo.com/
 
-# Api basic intro section 
+# FastApi basic knowledge
 
 from fastapi import FastAPI
 
