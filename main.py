@@ -1,3 +1,6 @@
+# For API Docs use:
+#localhost:port/docs
+#localhost:port/redoc
 from fastapi import FastAPI
 app =FastAPI()
 
